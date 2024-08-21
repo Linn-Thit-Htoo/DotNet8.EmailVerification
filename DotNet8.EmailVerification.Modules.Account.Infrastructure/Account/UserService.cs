@@ -52,7 +52,7 @@ namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Account
                 await _context.Tbl_Setups.AddAsync(setupCode, cancellationToken);
 
                 BackgroundJob.Schedule<UserService>(x => x.ExpireCode(setupCode.SetupId, user.UserId, cancellationToken),
-                    TimeSpan.FromMinutes(1));
+                    TimeSpan.FromMinutes(2));
 
                 var response = await _fluentEmail.To(registerUser.Email).Subject(_subject).Body($"Your OTP is: {randomCode}").SendAsync();
                 if (!response.Successful)
@@ -142,7 +142,7 @@ namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Account
                 var setupCode = await _context.Tbl_Setups.FirstOrDefaultAsync(x => x.SetupCode == confirmEmailRequest.Code, cancellationToken: cancellationToken);
                 if (setupCode is null)
                 {
-                    result = Result<UserDto>.NotFound("Setup Code Not Found.");
+                    result = Result<UserDto>.NotFound("Your Code is invalid.");
                     goto result;
                 }
 
