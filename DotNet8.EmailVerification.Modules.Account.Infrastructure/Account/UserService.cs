@@ -126,5 +126,41 @@ namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Account
         result:
             return result;
         }
+
+        public async Task<Result<UserDto>> ConfirmEmailAsync(ConfirmEmailRequestDto confirmEmailRequest, CancellationToken cancellationToken)
+        {
+            Result<UserDto> result;
+            try
+            {
+                var user = await _context.Tbl_Users.FindAsync([confirmEmailRequest.UserId], cancellationToken: cancellationToken);
+                if (user is null)
+                {
+                    result = Result<UserDto>.NotFound("User Not Found.");
+                    goto result;
+                }
+
+                var setupCode = await _context.Tbl_Setups.FirstOrDefaultAsync(x => x.SetupCode == confirmEmailRequest.Code);
+                if (setupCode is null)
+                {
+                    result = Result<UserDto>.NotFound("Setup Code Not Found.");
+                    goto result;
+                }
+
+                user.IsEmailVerified = true;
+                _context.Tbl_Users.Update(user);
+
+                _context.Tbl_Setups.Remove(setupCode);
+                await _context.SaveChangesAsync(cancellationToken);
+
+                result = Result<UserDto>.Success();
+            }
+            catch (Exception ex)
+            {
+                result = Result<UserDto>.Failure(ex);
+            }
+
+        result:
+            return result;
+        }
     }
 }
