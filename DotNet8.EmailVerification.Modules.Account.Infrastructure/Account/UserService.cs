@@ -139,7 +139,7 @@ namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Account
                     goto result;
                 }
 
-                var setupCode = await _context.Tbl_Setups.FirstOrDefaultAsync(x => x.SetupCode == confirmEmailRequest.Code);
+                var setupCode = await _context.Tbl_Setups.FirstOrDefaultAsync(x => x.SetupCode == confirmEmailRequest.Code, cancellationToken: cancellationToken);
                 if (setupCode is null)
                 {
                     result = Result<UserDto>.NotFound("Setup Code Not Found.");
