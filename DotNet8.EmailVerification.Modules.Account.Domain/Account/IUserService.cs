@@ -10,6 +10,6 @@ namespace DotNet8.EmailVerification.Modules.Account.Domain.Account
 {
     public interface IUserService
     {
-        Task<Result<UserDto>> Register(RegisterUserDto registerUser, CancellationToken cancellationToken);
+        Task<Result<UserDto>> RegisterAsync(RegisterUserDto registerUser, CancellationToken cancellationToken);
     }
 }

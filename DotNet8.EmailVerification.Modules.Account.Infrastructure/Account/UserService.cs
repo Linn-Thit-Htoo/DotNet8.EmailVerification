@@ -29,7 +29,7 @@ namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Account
             _subject = "Email Verification";
         }
 
-        public async Task<Result<UserDto>> Register(RegisterUserDto registerUser, CancellationToken cancellationToken)
+        public async Task<Result<UserDto>> RegisterAsync(RegisterUserDto registerUser, CancellationToken cancellationToken)
         {
             Result<UserDto> result;
             var transaction = await _context.Database.BeginTransactionAsync(cancellationToken);
@@ -62,8 +62,13 @@ namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Account
                     goto result;
                 }
 
+                await _context.SaveChangesAsync(cancellationToken);
                 await transaction.CommitAsync(cancellationToken);
-                result = Result<UserDto>.SaveSuccess("Registration Successful.");
+                var model = new UserDto()
+                {
+                    UserId = user.UserId,
+                };
+                result = Result<UserDto>.Success(model, "Registration Successful.");
             }
             catch (Exception ex)
             {
@@ -84,7 +89,7 @@ namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Account
             return sixDigitNumber;
         }
 
-        private async Task<Result<SetupDto>> ExpireCode(string setUpId, string userId, CancellationToken cancellationToken)
+        public async Task<Result<SetupDto>> ExpireCode(string setUpId, string userId, CancellationToken cancellationToken)
         {
             Result<SetupDto> result;
             try

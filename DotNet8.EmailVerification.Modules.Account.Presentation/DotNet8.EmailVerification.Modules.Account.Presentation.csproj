@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentEmail.Smtp" Version="3.0.2" />
     <PackageReference Include="Hangfire" Version="1.8.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
@@ -24,7 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\DotNet8.EmailVerification.Modules.Account.Domain\DotNet8.EmailVerification.Modules.Account.Domain.csproj" />
+    <ProjectReference Include="..\DotNet8.EmailVerification.Modules.Account.Infrastructure\DotNet8.EmailVerification.Modules.Account.Infrastructure.csproj" />
+    <ProjectReference Include="..\DotNet8.EmailVerification.Shared\DotNet8.EmailVerification.Shared.csproj" />
   </ItemGroup>
 
 </Project>
