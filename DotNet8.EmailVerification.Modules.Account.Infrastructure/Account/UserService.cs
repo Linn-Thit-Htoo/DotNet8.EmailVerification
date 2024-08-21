@@ -36,7 +36,7 @@ namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Account
             try
             {
                 bool isEmailDuplicate = await _context.Tbl_Users.AnyAsync(x => x.Email == registerUser.Email
-                    && x.IsEmailVerified && x.IsActive, cancellationToken: cancellationToken);
+                    && x.IsActive, cancellationToken: cancellationToken);
 
                 if (isEmailDuplicate)
                 {
