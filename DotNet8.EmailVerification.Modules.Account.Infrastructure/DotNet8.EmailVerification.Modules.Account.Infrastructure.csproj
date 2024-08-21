@@ -21,4 +21,8 @@
     <PackageReference Include="Ulid" Version="1.3.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet8.EmailVerification.Modules.Account.Domain\DotNet8.EmailVerification.Modules.Account.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

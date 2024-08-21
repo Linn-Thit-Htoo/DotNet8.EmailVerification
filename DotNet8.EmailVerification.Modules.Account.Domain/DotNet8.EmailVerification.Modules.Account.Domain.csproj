@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet8.EmailVerification.DTOs\DotNet8.EmailVerification.DTOs.csproj" />
+    <ProjectReference Include="..\DotNet8.EmailVerification.Utils\DotNet8.EmailVerification.Utils.csproj" />
+  </ItemGroup>
+
 </Project>
