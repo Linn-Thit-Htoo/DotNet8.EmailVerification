@@ -1,0 +1,33 @@
+﻿@layout EmptyLayout
+@page "/"
+
+<div class="container mt-3">
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			<MudCard>
+				<MudForm>
+					<MudText Class="text-center mt-2 fs-3">Login</MudText>
+					<MudCardContent>
+						<MudTextField @bind-Value="RequestModel.UserName"
+									  For="@(() => RequestModel.UserName)"
+									  Immediate="true"
+									  Label="User Name" />
+
+						<MudTextField @bind-Value="RequestModel.Email"
+									  For="@(() => RequestModel.Email)"
+									  Immediate="true"
+									  Label="Email" />
+
+						<MudTextField @bind-Value="RequestModel.Password"
+									  For="@(() => RequestModel.Password)"
+									  Immediate="true"
+									  Label="Password" />
+					</MudCardContent>
+				</MudForm>
+				<MudCardActions>
+					<MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" OnClick="@Register">Login</MudButton>
+				</MudCardActions>
+			</MudCard>
+		</div>
+	</div>
+</div>
