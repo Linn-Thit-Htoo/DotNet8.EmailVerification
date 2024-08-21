@@ -1,12 +1,12 @@
 ﻿@layout EmptyLayout
-@page "/"
+@page "/register"
 
 <div class="container mt-3">
 	<div class="row justify-content-center">
 		<div class="col-md-6">
 			<MudCard>
 				<MudForm>
-					<MudText Class="text-center mt-2 fs-3">Login</MudText>
+					<MudText Class="text-center mt-2 fs-3">Register</MudText>
 					<MudCardContent>
 						<MudTextField @bind-Value="RequestModel.UserName"
 									  For="@(() => RequestModel.UserName)"
@@ -25,7 +25,7 @@
 					</MudCardContent>
 				</MudForm>
 				<MudCardActions>
-					<MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" OnClick="@Register">Login</MudButton>
+					<MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" OnClick="@Register">Register</MudButton>
 				</MudCardActions>
 			</MudCard>
 		</div>

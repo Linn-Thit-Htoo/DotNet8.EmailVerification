@@ -14,7 +14,8 @@ namespace DotNet8.EmailVerification.Modules.Account.Presentation.Extensions
         {
             return services.AddDbContextServices(builder)
                 .AddDataAccessService()
-                .AddHangfireService(builder);
+                .AddHangfireService(builder)
+                .AddCorsPolicyService(builder);
         }
 
         private static IServiceCollection AddDbContextServices(this IServiceCollection services, WebApplicationBuilder builder)
@@ -53,6 +54,15 @@ namespace DotNet8.EmailVerification.Modules.Account.Presentation.Extensions
             });
 
             builder.Services.AddHangfireServer();
+            return services;
+        }
+
+        private static IServiceCollection AddCorsPolicyService(
+            this IServiceCollection services,
+            WebApplicationBuilder builder
+        )
+        {
+            builder.Services.AddCors();
             return services;
         }
     }

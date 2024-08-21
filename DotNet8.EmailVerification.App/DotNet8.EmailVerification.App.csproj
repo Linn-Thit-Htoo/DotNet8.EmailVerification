@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Blazored.LocalStorage" Version="4.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.6" PrivateAssets="all" />
     <PackageReference Include="MudBlazor" Version="7.6.0" />
@@ -16,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DotNet8.EmailVerification.DTOs\DotNet8.EmailVerification.DTOs.csproj" />
     <ProjectReference Include="..\DotNet8.EmailVerification.Shared\DotNet8.EmailVerification.Shared.csproj" />
+    <ProjectReference Include="..\DotNet8.EmailVerification.Utils\DotNet8.EmailVerification.Utils.csproj" />
   </ItemGroup>
 
   <ItemGroup>

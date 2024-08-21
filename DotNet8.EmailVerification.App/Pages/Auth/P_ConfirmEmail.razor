@@ -1,0 +1,23 @@
+﻿@layout EmptyLayout
+@page "/confirm-email"
+
+<div class="container mt-3">
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			<MudCard>
+				<MudForm>
+					<MudText Class="text-center mt-2 fs-3">Register</MudText>
+					<MudCardContent>
+						<MudTextField @bind-Value="RequestModel.Code"
+									  For="@(() => RequestModel.Code)"
+									  Immediate="true"
+									  Label="Code" />
+					</MudCardContent>
+				</MudForm>
+				<MudCardActions>
+					<MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" OnClick="@Confirm">Login</MudButton>
+				</MudCardActions>
+			</MudCard>
+		</div>
+	</div>
+</div>

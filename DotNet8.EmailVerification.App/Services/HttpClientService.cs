@@ -13,7 +13,7 @@ namespace DotNet8.EmailVerification.App.Services
             _httpClient = httpClient;
         }
 
-        public async Task<T> ExecuteAsync<T>(string endpoint, HttpMethod httpMethod, object? requestModel = null)
+        public async Task<T> ExecuteAsync<T>(string endpoint, EnumHttpMethod httpMethod, object? requestModel = null)
         {
             HttpResponseMessage? response = null;
             HttpContent? content = null;
@@ -26,22 +26,22 @@ namespace DotNet8.EmailVerification.App.Services
 
             switch (httpMethod)
             {
-                case HttpMethod.GET:
+                case EnumHttpMethod.GET:
                     response = await _httpClient.GetAsync(endpoint);
                     break;
-                case HttpMethod.POST:
+                case EnumHttpMethod.POST:
                     response = await _httpClient.PostAsync(endpoint, content);
                     break;
-                case HttpMethod.PUT:
+                case EnumHttpMethod.PUT:
                     response = await _httpClient.PutAsync(endpoint, content);
                     break;
-                case HttpMethod.PATCH:
+                case EnumHttpMethod.PATCH:
                     response = await _httpClient.PatchAsync(endpoint, content);
                     break;
-                case HttpMethod.DELETE:
+                case EnumHttpMethod.DELETE:
                     response = await _httpClient.DeleteAsync(endpoint);
                     break;
-                case HttpMethod.None:
+                case EnumHttpMethod.None:
                 default:
                     throw new Exception("Invalid Http Method.");
             }
@@ -51,7 +51,7 @@ namespace DotNet8.EmailVerification.App.Services
         }
     }
 
-    public enum HttpMethod
+    public enum EnumHttpMethod
     {
         None,
         GET,
