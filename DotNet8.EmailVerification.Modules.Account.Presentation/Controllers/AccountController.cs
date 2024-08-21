@@ -22,5 +22,12 @@ namespace DotNet8.EmailVerification.Modules.Account.Presentation.Controllers
             var result = await _userService.RegisterAsync(registerUser, cancellationToken);
             return Content(result);
         }
+
+        [HttpPost("confirm-email")]
+        public async Task<IActionResult> ConfirmEmail([FromBody] ConfirmEmailRequestDto confirmEmailRequest, CancellationToken cancellationToken)
+        {
+            var result = await _userService.ConfirmEmailAsync(confirmEmailRequest, cancellationToken);
+            return Content(result);
+        }
     }
 }
