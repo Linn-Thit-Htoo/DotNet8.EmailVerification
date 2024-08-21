@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNet8.EmailVerification.Utils.Resources
+namespace DotNet8.EmailVerification.Shared
 {
-    public class MessageResource
+    public static class DevCode
     {
     }
 }
