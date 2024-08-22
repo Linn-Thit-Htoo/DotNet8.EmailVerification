@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace DotNet8.EmailVerification.Modules.Account.Domain.Entities;
+﻿namespace DotNet8.EmailVerification.Modules.Account.Domain.Entities;
 
 [Table("Tbl_Setup")]
 public class Tbl_Setup
