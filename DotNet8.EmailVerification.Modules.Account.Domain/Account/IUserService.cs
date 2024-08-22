@@ -2,6 +2,12 @@
 
 public interface IUserService
 {
-    Task<Result<UserDto>> RegisterAsync(RegisterUserDto registerUser, CancellationToken cancellationToken);
-    Task<Result<UserDto>> ConfirmEmailAsync(ConfirmEmailRequestDto confirmEmailRequest, CancellationToken cancellationToken);
+    Task<Result<UserDto>> RegisterAsync(
+        RegisterUserDto registerUser,
+        CancellationToken cancellationToken
+    );
+    Task<Result<UserDto>> ConfirmEmailAsync(
+        ConfirmEmailRequestDto confirmEmailRequest,
+        CancellationToken cancellationToken
+    );
 }
