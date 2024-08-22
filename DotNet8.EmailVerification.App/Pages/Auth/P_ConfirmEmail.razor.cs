@@ -1,5 +1,4 @@
-﻿using DotNet8.EmailVerification.App.Services;
-using DotNet8.EmailVerification.DTOs.Features.Account;
+﻿using DotNet8.EmailVerification.DTOs.Features.Account;
 using DotNet8.EmailVerification.Utils;
 using MudBlazor;
 
