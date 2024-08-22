@@ -7,34 +7,69 @@ public class Result<T>
     public string Message { get; set; }
     public bool IsSuccess { get; set; }
 
-    public static Result<T> Success(string message = "Success.", EnumStatusCode statusCode = EnumStatusCode.Success)
+    public static Result<T> Success(
+        string message = "Success.",
+        EnumStatusCode statusCode = EnumStatusCode.Success
+    )
     {
-        return new Result<T> { Message = message, StatusCode = statusCode, IsSuccess = true };
+        return new Result<T>
+        {
+            Message = message,
+            StatusCode = statusCode,
+            IsSuccess = true
+        };
     }
 
-    public static Result<T> Success(T data, string message = "Success.", EnumStatusCode statusCode = EnumStatusCode.Success)
+    public static Result<T> Success(
+        T data,
+        string message = "Success.",
+        EnumStatusCode statusCode = EnumStatusCode.Success
+    )
     {
-        return new Result<T> { Data = data, Message = message, StatusCode = statusCode, IsSuccess = true };
+        return new Result<T>
+        {
+            Data = data,
+            Message = message,
+            StatusCode = statusCode,
+            IsSuccess = true
+        };
     }
 
-    public static Result<T> SaveSuccess(string message = "Saving Successful.", EnumStatusCode statusCode = EnumStatusCode.Success)
+    public static Result<T> SaveSuccess(
+        string message = "Saving Successful.",
+        EnumStatusCode statusCode = EnumStatusCode.Success
+    )
     {
         return Result<T>.Success(message, statusCode);
     }
 
-    public static Result<T> UpdateSuccess(string message = "Updating Successful.", EnumStatusCode statusCode = EnumStatusCode.Success)
+    public static Result<T> UpdateSuccess(
+        string message = "Updating Successful.",
+        EnumStatusCode statusCode = EnumStatusCode.Success
+    )
     {
         return Result<T>.Success(message, statusCode);
     }
 
-    public static Result<T> DeleteSuccess(string message = "Deleting Successful.", EnumStatusCode statusCode = EnumStatusCode.Success)
+    public static Result<T> DeleteSuccess(
+        string message = "Deleting Successful.",
+        EnumStatusCode statusCode = EnumStatusCode.Success
+    )
     {
         return Result<T>.Success(message, statusCode);
     }
 
-    public static Result<T> Failure(string message = "Fail.", EnumStatusCode statusCode = EnumStatusCode.BadRequest)
+    public static Result<T> Failure(
+        string message = "Fail.",
+        EnumStatusCode statusCode = EnumStatusCode.BadRequest
+    )
     {
-        return new Result<T> { Message = message, StatusCode = statusCode, IsSuccess = false };
+        return new Result<T>
+        {
+            Message = message,
+            StatusCode = statusCode,
+            IsSuccess = false
+        };
     }
 
     public static Result<T> Failure(Exception ex)
