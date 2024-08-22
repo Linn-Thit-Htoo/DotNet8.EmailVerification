@@ -1,7 +1,4 @@
-﻿using DotNet8.EmailVerification.Shared;
-using Microsoft.AspNetCore.Http;
-
-namespace DotNet8.EmailVerification.Modules.Account.Presentation.Controllers
+﻿namespace DotNet8.EmailVerification.Modules.Account.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
