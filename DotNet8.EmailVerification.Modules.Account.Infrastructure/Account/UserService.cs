@@ -22,6 +22,8 @@ public class UserService : IUserService
         var transaction = await _context.Database.BeginTransactionAsync(cancellationToken);
         try
         {
+            #region Email Duplicate
+
             bool isEmailDuplicate = await _context.Tbl_Users.AnyAsync(
                 x => x.Email == registerUser.Email && x.IsActive,
                 cancellationToken: cancellationToken
@@ -32,6 +34,8 @@ public class UserService : IUserService
                 result = Result<UserDto>.Duplicate("Email Duplicate.");
                 goto result;
             }
+
+            #endregion
 
             var user = registerUser.ToEntity();
             await _context.Tbl_Users.AddAsync(user, cancellationToken);
