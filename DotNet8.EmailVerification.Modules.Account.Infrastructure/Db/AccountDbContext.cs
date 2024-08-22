@@ -1,6 +1,4 @@
-﻿using DotNet8.EmailVerification.Modules.Account.Domain.Entities;
-
-namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Db;
+﻿namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Db;
 
 public class AccountDbContext : DbContext
 {
