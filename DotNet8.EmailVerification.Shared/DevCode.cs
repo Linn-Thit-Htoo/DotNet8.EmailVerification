@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace DotNet8.EmailVerification.Shared;
+﻿namespace DotNet8.EmailVerification.Shared;
 
 public static class DevCode
 {
