@@ -2,21 +2,32 @@
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddDependencyInjection(this IServiceCollection services, WebApplicationBuilder builder)
+    public static IServiceCollection AddDependencyInjection(
+        this IServiceCollection services,
+        WebApplicationBuilder builder
+    )
     {
-        return services.AddDbContextServices(builder)
+        return services
+            .AddDbContextServices(builder)
             .AddDataAccessService()
             .AddHangfireService(builder)
             .AddCorsPolicyService(builder);
     }
 
-    private static IServiceCollection AddDbContextServices(this IServiceCollection services, WebApplicationBuilder builder)
+    private static IServiceCollection AddDbContextServices(
+        this IServiceCollection services,
+        WebApplicationBuilder builder
+    )
     {
-        builder.Services.AddDbContext<AccountDbContext>(opt =>
-        {
-            opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
-            opt.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-        }, ServiceLifetime.Transient, ServiceLifetime.Transient);
+        builder.Services.AddDbContext<AccountDbContext>(
+            opt =>
+            {
+                opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
+                opt.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            },
+            ServiceLifetime.Transient,
+            ServiceLifetime.Transient
+        );
 
         return services;
     }
@@ -26,10 +37,15 @@ public static class DependencyInjection
         return services.AddScoped<IUserService, UserService>();
     }
 
-    public static FluentEmailServicesBuilder AddFluentEmail(this IServiceCollection services, WebApplicationBuilder builder)
+    public static FluentEmailServicesBuilder AddFluentEmail(
+        this IServiceCollection services,
+        WebApplicationBuilder builder
+    )
     {
         var fromEmail = builder.Configuration.GetSection("FluentEmail:FromEmail")?.Value;
-        return services.AddFluentEmail(fromEmail).AddSmtpSender("smtp.gmail.com", 587, fromEmail, "wqxk dptz rfgm hjjf");
+        return services
+            .AddFluentEmail(fromEmail)
+            .AddSmtpSender("smtp.gmail.com", 587, fromEmail, "wqxk dptz rfgm hjjf");
     }
 
     private static IServiceCollection AddHangfireService(
