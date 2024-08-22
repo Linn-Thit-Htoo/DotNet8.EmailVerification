@@ -9,7 +9,11 @@ public class HttpClientService
         _httpClient = httpClient;
     }
 
-    public async Task<T> ExecuteAsync<T>(string endpoint, EnumHttpMethod httpMethod, object? requestModel = null)
+    public async Task<T> ExecuteAsync<T>(
+        string endpoint,
+        EnumHttpMethod httpMethod,
+        object? requestModel = null
+    )
     {
         HttpResponseMessage? response = null;
         HttpContent? content = null;
