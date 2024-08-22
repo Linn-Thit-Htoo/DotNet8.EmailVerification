@@ -11,23 +11,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Account", "Account", "{DA95F262-2E5E-48B6-AEBD-5AD0DF633AAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.EmailVerification.Modules.Account.Domain", "DotNet8.EmailVerification.Modules.Account.Domain\DotNet8.EmailVerification.Modules.Account.Domain.csproj", "{6E0C2DA9-83D1-423A-9156-2E5E3E1BF83B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet8.EmailVerification.Modules.Account.Domain", "DotNet8.EmailVerification.Modules.Account.Domain\DotNet8.EmailVerification.Modules.Account.Domain.csproj", "{6E0C2DA9-83D1-423A-9156-2E5E3E1BF83B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.EmailVerification.Modules.Account.Application", "DotNet8.EmailVerification.Modules.Account.Application\DotNet8.EmailVerification.Modules.Account.Application.csproj", "{F9231FDE-A168-42B8-9C0D-7581AA64FD65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet8.EmailVerification.Modules.Account.Application", "DotNet8.EmailVerification.Modules.Account.Application\DotNet8.EmailVerification.Modules.Account.Application.csproj", "{F9231FDE-A168-42B8-9C0D-7581AA64FD65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.EmailVerification.Modules.Account.Infrastructure", "DotNet8.EmailVerification.Modules.Account.Infrastructure\DotNet8.EmailVerification.Modules.Account.Infrastructure.csproj", "{1599206C-8DD7-4AB9-82A2-6C39AEFE7C5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet8.EmailVerification.Modules.Account.Infrastructure", "DotNet8.EmailVerification.Modules.Account.Infrastructure\DotNet8.EmailVerification.Modules.Account.Infrastructure.csproj", "{1599206C-8DD7-4AB9-82A2-6C39AEFE7C5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.EmailVerification.Modules.Account.Presentation", "DotNet8.EmailVerification.Modules.Account.Presentation\DotNet8.EmailVerification.Modules.Account.Presentation.csproj", "{B8F1E7A8-69FD-4786-9448-A5EAFC0B63BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet8.EmailVerification.Modules.Account.Presentation", "DotNet8.EmailVerification.Modules.Account.Presentation\DotNet8.EmailVerification.Modules.Account.Presentation.csproj", "{B8F1E7A8-69FD-4786-9448-A5EAFC0B63BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.EmailVerification.Shared", "DotNet8.EmailVerification.Shared\DotNet8.EmailVerification.Shared.csproj", "{18865412-5F97-40ED-ABF9-57F3FA82CDA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet8.EmailVerification.Shared", "DotNet8.EmailVerification.Shared\DotNet8.EmailVerification.Shared.csproj", "{18865412-5F97-40ED-ABF9-57F3FA82CDA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.EmailVerification.DTOs", "DotNet8.EmailVerification.DTOs\DotNet8.EmailVerification.DTOs.csproj", "{A174E290-291D-402B-8BC5-615147BD2A5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet8.EmailVerification.DTOs", "DotNet8.EmailVerification.DTOs\DotNet8.EmailVerification.DTOs.csproj", "{A174E290-291D-402B-8BC5-615147BD2A5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.EmailVerification.Utils", "DotNet8.EmailVerification.Utils\DotNet8.EmailVerification.Utils.csproj", "{17D2EC14-1E43-4AAB-8BE0-1C54F8AFADBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet8.EmailVerification.Utils", "DotNet8.EmailVerification.Utils\DotNet8.EmailVerification.Utils.csproj", "{17D2EC14-1E43-4AAB-8BE0-1C54F8AFADBF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{183579CA-B953-4DE5-B793-1055D979F279}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.EmailVerification.App", "DotNet8.EmailVerification.App\DotNet8.EmailVerification.App.csproj", "{81DEF838-A312-46C4-98BC-1CB2E0FB269A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNet8.EmailVerification.App", "DotNet8.EmailVerification.App\DotNet8.EmailVerification.App.csproj", "{81DEF838-A312-46C4-98BC-1CB2E0FB269A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0ABD552A-6AF2-42D5-A8D1-9FBFBDE2356A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +74,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{13F0A89B-1DCA-4CFC-B7DB-BE8B6E8AE925} = {D87C5E3E-271F-45BD-B8AB-1063CA95F926}
 		{DA95F262-2E5E-48B6-AEBD-5AD0DF633AAF} = {13F0A89B-1DCA-4CFC-B7DB-BE8B6E8AE925}
 		{6E0C2DA9-83D1-423A-9156-2E5E3E1BF83B} = {DA95F262-2E5E-48B6-AEBD-5AD0DF633AAF}
 		{F9231FDE-A168-42B8-9C0D-7581AA64FD65} = {DA95F262-2E5E-48B6-AEBD-5AD0DF633AAF}
@@ -80,6 +83,7 @@ Global
 		{18865412-5F97-40ED-ABF9-57F3FA82CDA7} = {D87C5E3E-271F-45BD-B8AB-1063CA95F926}
 		{A174E290-291D-402B-8BC5-615147BD2A5A} = {D87C5E3E-271F-45BD-B8AB-1063CA95F926}
 		{17D2EC14-1E43-4AAB-8BE0-1C54F8AFADBF} = {D87C5E3E-271F-45BD-B8AB-1063CA95F926}
+		{183579CA-B953-4DE5-B793-1055D979F279} = {D87C5E3E-271F-45BD-B8AB-1063CA95F926}
 		{81DEF838-A312-46C4-98BC-1CB2E0FB269A} = {183579CA-B953-4DE5-B793-1055D979F279}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
