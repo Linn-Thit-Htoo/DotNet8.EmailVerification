@@ -1,5 +1,4 @@
 using DotNet8.EmailVerification.Modules.Account.Presentation.Extensions;
-using Hangfire;
 
 var builder = WebApplication.CreateBuilder(args);
 
