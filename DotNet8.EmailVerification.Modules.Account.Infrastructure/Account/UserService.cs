@@ -53,6 +53,8 @@ public class UserService : IUserService
 
             #endregion
 
+            #region Send Email
+
             var response = await _fluentEmail
                 .To(registerUser.Email)
                 .Subject(_subject)
@@ -64,6 +66,8 @@ public class UserService : IUserService
                 result = Result<UserDto>.Failure();
                 goto result;
             }
+
+            #endregion
 
             await _context.SaveChangesAsync(cancellationToken);
             await transaction.CommitAsync(cancellationToken);
