@@ -1,14 +1,4 @@
-﻿using DotNet8.EmailVerification.DTOs.Features.Account;
-using DotNet8.EmailVerification.DTOs.Features.Setup;
-using DotNet8.EmailVerification.Modules.Account.Domain.Account;
-using DotNet8.EmailVerification.Modules.Account.Infrastructure.Db;
-using DotNet8.EmailVerification.Modules.Account.Infrastructure.Extensions;
-using DotNet8.EmailVerification.Utils;
-using FluentEmail.Core;
-using Hangfire;
-using Microsoft.EntityFrameworkCore;
-
-namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Account;
+﻿namespace DotNet8.EmailVerification.Modules.Account.Infrastructure.Account;
 
 public class UserService : IUserService
 {

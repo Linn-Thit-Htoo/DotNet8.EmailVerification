@@ -1,5 +1,4 @@
-﻿using DotNet8.EmailVerification.DTOs.Features.Account;
-using DotNet8.EmailVerification.Modules.Account.Domain.Entities;
+﻿using DotNet8.EmailVerification.Modules.Account.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
