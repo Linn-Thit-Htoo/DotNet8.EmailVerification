@@ -1,5 +1,4 @@
-﻿using DotNet8.EmailVerification.Modules.Account.Domain.Account;
-using DotNet8.EmailVerification.Modules.Account.Infrastructure.Account;
+﻿using DotNet8.EmailVerification.Modules.Account.Infrastructure.Account;
 using DotNet8.EmailVerification.Modules.Account.Infrastructure.Db;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;

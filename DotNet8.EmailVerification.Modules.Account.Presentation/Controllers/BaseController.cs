@@ -1,6 +1,5 @@
 ﻿using DotNet8.EmailVerification.Shared;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 
 namespace DotNet8.EmailVerification.Modules.Account.Presentation.Controllers
 {
