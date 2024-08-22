@@ -44,10 +44,14 @@ public class UserService : IUserService
             var setupCode = Extension.ToEntity(user.UserId, randomCode);
             await _context.Tbl_Setups.AddAsync(setupCode, cancellationToken);
 
+            #region Set Background Job
+
             BackgroundJob.Schedule<UserService>(
                 x => x.ExpireCode(setupCode.SetupId, user.UserId, cancellationToken),
                 TimeSpan.FromMinutes(2)
             );
+
+            #endregion
 
             var response = await _fluentEmail
                 .To(registerUser.Email)
