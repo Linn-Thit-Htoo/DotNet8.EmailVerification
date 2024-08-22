@@ -1,8 +1,4 @@
-﻿using DotNet8.EmailVerification.DTOs.Features.Account;
-using DotNet8.EmailVerification.Utils;
-using MudBlazor;
-
-namespace DotNet8.EmailVerification.App.Pages.Auth
+﻿namespace DotNet8.EmailVerification.App.Pages.Auth
 {
     public partial class P_Register
     {
