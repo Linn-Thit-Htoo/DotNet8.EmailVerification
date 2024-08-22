@@ -1,6 +1,4 @@
-﻿using DotNet8.EmailVerification.Utils.Enums;
-
-namespace DotNet8.EmailVerification.Utils;
+﻿namespace DotNet8.EmailVerification.Utils;
 
 public class Result<T>
 {
