@@ -84,6 +84,8 @@ public class UserService : IUserService
         return result;
     }
 
+    #region GetSixRandomNumbers
+
     private string GetSixRandomNumbers()
     {
         Random r = new();
@@ -92,6 +94,8 @@ public class UserService : IUserService
 
         return sixDigitNumber;
     }
+
+    #endregion
 
     public async Task<Result<SetupDto>> ExpireCode(
         string setUpId,
