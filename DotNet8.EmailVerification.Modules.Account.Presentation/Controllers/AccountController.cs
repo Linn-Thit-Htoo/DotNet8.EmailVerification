@@ -11,6 +11,8 @@ public class AccountController : BaseController
         _userService = userService;
     }
 
+    #region Register
+
     [HttpPost("register")]
     public async Task<IActionResult> Register(
         [FromBody] RegisterUserDto registerUser,
@@ -20,6 +22,8 @@ public class AccountController : BaseController
         var result = await _userService.RegisterAsync(registerUser, cancellationToken);
         return Content(result);
     }
+
+    #endregion
 
     [HttpPost("confirm-email")]
     public async Task<IActionResult> ConfirmEmail(
