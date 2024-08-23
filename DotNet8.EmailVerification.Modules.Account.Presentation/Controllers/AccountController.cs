@@ -25,6 +25,8 @@ public class AccountController : BaseController
 
     #endregion
 
+    #region Confirm Email
+
     [HttpPost("confirm-email")]
     public async Task<IActionResult> ConfirmEmail(
         [FromBody] ConfirmEmailRequestDto confirmEmailRequest,
@@ -34,4 +36,6 @@ public class AccountController : BaseController
         var result = await _userService.ConfirmEmailAsync(confirmEmailRequest, cancellationToken);
         return Content(result);
     }
+
+    #endregion
 }
